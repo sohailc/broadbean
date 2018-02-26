@@ -83,8 +83,7 @@ class PulseAtoms:
         time = np.linspace(0, dur, npts)
         centre = dur/2
         baregauss = np.exp((-(time-mu-centre)**2/(2*sigma**2)))
-        normalisation = 1/np.sqrt(2*sigma**2*np.pi)
-        return ampl*baregauss*normalisation+offset
+        return ampl * baregauss + offset
 
 
 class _AWGOutput:
